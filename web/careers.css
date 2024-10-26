@@ -1,0 +1,130 @@
+/* Resetting default margin and padding */
+html, body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    width: 100%; /* Ensure full width */
+    overflow-x: hidden; /* Prevent horizontal overflow if needed */
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 20px 80px; /* Adjust padding as needed */
+    position: fixed;
+    top: 0;
+    width: 100%; /* Full width */
+    z-index: 1000;
+    border-radius: 5px; /* No rounding to the top */
+    box-sizing: border-box; /* Include padding and border in total width */
+}
+
+.navbar ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center the items */
+}
+
+.navbar li {
+    margin: 0 15px; /* Space between menu items */
+}
+
+.navbar li a {
+    display: block; /* Block display for entire area */
+    color: white; /* Text color */
+    text-align: center; /* Center text */
+    padding: 14px 16px; /* Padding around links */
+    text-decoration: none; /* Remove underline */
+}
+
+.navbar li a:hover {
+    background-color: #575757; /* Change background on hover */
+}
+
+/* Marquee Note Section */
+.marquee-container {
+    width: 100%; /* Full width */
+    background-color: #ffcc00; /* Background color for the marquee */
+    padding: 10px; /* Padding around the text */
+    border-radius: 2px; /* Rounded corners */
+    margin-top: 90px; /* Space above and below */
+    text-align: center; /* Center the text */
+    font-weight: bold; /* Make the text bold */
+    font-size: 18px; /* Adjust font size */
+}
+
+/* Carousel Container */
+.carousel-container {
+    width: 100%; /* Full width */
+    margin: 2px auto; /* Center the container */
+    padding: 0 1px; /* Add padding inside the container */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow from rounded corners */
+    box-shadow: 0 2px 5px hwb(0 3% 7% / 0.2); /* Optional: add a shadow */
+    background-color: rgb(44, 41, 41); /* Optional: background color for the container */
+}
+
+/* Style for the banner */
+.banner {
+    background-image: url('https://via.placeholder.com/1920x600'); /* Replace with your banner image */
+    background-size: cover; 
+    background-position: center;
+    height: 400px; 
+    color: white; 
+    display: flex; 
+    align-items: flex-end; /* Align content to the bottom */
+    justify-content: center; 
+    text-align: center; 
+    padding: 2px 2px; /* Add some padding for spacing */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.banner-text {
+    margin-bottom: 150px; /* Space between text and button */
+    padding-bottom: 150px;
+}
+
+
+
+
+.banner-text .btn {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    color: #333; /* Dark text color */
+    border: none; /* No border */
+    margin-top: 50px;
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for the button */
+    transition: background-color 0.3s, color 0.3s; /* Transition effects */
+}
+
+/* Button Hover Effects */
+.banner-text .btn:hover {
+    background-color: rgba(255, 255, 255, 1); /* Full opacity on hover */
+    color: #007bff; /* Change text color on hover */
+}
+
+
+
+
+
+
+
+/* Footer styles */
+.footer {
+    background-color: #333; /* Footer background color */
+    color: white; /* Footer text color */
+    text-align: center; 
+    padding: 2px 0; /* Padding for footer */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 2px; /* Space between footer and content above */
+}
+
+.footer-content p {
+    margin: 5px 0; /* Space between footer text lines */
+}

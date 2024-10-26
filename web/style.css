@@ -1,0 +1,668 @@
+/* Reset and basic styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation bar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 2px 80px;
+    position: fixed;
+    width: calc(100% - 100px);
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .section {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* First section: Menu Items */
+.navbar .menu-item {
+    position: relative;
+    padding: 8px 12px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+    border-radius: 4px;
+}
+
+.navbar .menu-item:hover {
+    background-color: #555;
+}
+
+/* Dropdown menu styling */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 35px;
+    background-color: white;
+    color: black;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.navbar .menu-item:hover .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    color: black;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+
+
+
+/* Logo styling */
+.logo img {
+    height: 90px; /* Adjust height as needed */
+    width: auto;  /* Keeps the logo’s original width ratio */
+}
+
+.navbar .logo {
+    display: flex;
+    margin-right: auto;
+    align-items: center; /* Vertically center the logo in the navbar */
+}
+
+
+/* Right section: Icons */
+.icon {
+    margin: 0 10px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Account icon and dropdown */
+.account-dropdown {
+    display: none;
+    position: absolute;
+    top: 35px;
+    background-color: white;
+    color: black;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.icon:hover .account-dropdown {
+    display: block;
+}
+
+.account-dropdown a {
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+.account-dropdown a:hover {
+    background-color: #ddd;
+}
+
+/* Icon SVGs */
+.icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Main page banner styling */
+.banner {
+    margin-top: 100px; /* Offset for navbar */
+    padding-top: 250px;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: url('banner.png') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .banner-text {
+    position: absolute;
+    top: 50%; /* Center the text vertically */
+    left: 50%; /* Center the text horizontally */
+    transform: translate(-50%, -50%); /* Adjusts for the centered position */
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+
+.banner h5 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.banner p {
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.banner button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* Additional Section Styles */
+.additional-section, .color-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Section Ratios */
+.section-20 {
+    flex: 0 0 20%;
+}
+
+.section-60 {
+    flex: 0 0 60%;
+}
+
+/* Middle Section */
+.middle-section {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Middle Section Items */
+.middle-section-item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.middle-section-item h5 {
+    font-family: 'Arial', sans-serif; /* Change to your desired font family */
+    font-size: 24px; /* Set a larger font size */
+    font-weight: bold; /* Optional: make the text bold */
+}
+
+
+/* Column Section */
+.column-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+/* Columns for the middle section */
+.column {
+    flex: 0 0 15%; /* Fixed width to fit in a single row */
+    margin: 10px;
+    text-align: center;
+}
+
+/* Column Images */
+.column img {
+    width: 150px; /* Reduced width */
+    height: 250px;
+    transition: transform 0.3s; /* Transition for hover effect */
+}
+
+/* Hover Effect */
+.column img:hover {
+    transform: scale(1.2); /* Scale up on hover */
+}
+
+/* Column Headings */
+.column h3 {
+    margin: 10px 0 0; /* Add margin for spacing */
+}
+
+/* Color Section */
+.color-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Shop by Color */
+.shop-by-color {
+    margin-bottom: 70px; /* Space between sections */
+}
+
+.shop-by-color h2 {
+    font-size: 24px; /* Big text size */
+    text-align: center; /* Center align */
+    padding-bottom: 50px;
+}
+
+/* Color Images */
+.color-images {
+    display: flex;
+    margin-bottom: 2px;
+    justify-content: space-around; /* Space between images */
+    margin-top: 10px; /* Add margin above */
+}
+
+.color-images img {
+    border-radius: 50%; /* Circular images */
+    cursor: pointer; /* Pointer cursor */
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between grid items */
+
+}
+
+/* Grid Item */
+.grid-item {
+    text-align: center; /* Center align images */
+}
+.grid-item img {
+    width: 150px;
+    height: 250px;
+    object-fit: cover; /* Ensures images fill the set dimensions while preserving aspect ratio */
+}
+
+/* Centering the View All button in the grid */
+.view-all {
+    text-align: center; /* Center align */
+    margin-top: 20px; /* Space above the button */
+    grid-column: 1 / -1; /* Make the button span all columns */
+}
+
+.view-all button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+/* New Description and Image Section */
+.description-image-section {
+    display: flex; /* Flexbox for layout */
+}
+
+/* Section Ratios */
+.section-20 {
+    flex: 0 0 20%; /* 20% width for left and right sections */
+}
+
+.section-60 {
+    flex: 0 0 60%; /* 60% width for the middle section */
+}
+
+/* Description Image Container */
+.description-image-container {
+    display: flex; /* Side by side layout */
+}
+
+/* Description Column */
+.column-description {
+    flex: 1; /* Allow this column to grow */
+    padding-right: 20px; /* Space between description and image */
+}
+
+/* Image Column */
+.column-image {
+    flex: 1; /* Allow this column to grow */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
+/* Description Image */
+.description-image {
+    width: 100%; /* Take full width of the column */
+    max-width: 500px; /* Limit max width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Spacing between sections */
+.section {
+    margin-top: 10px; /* Space above each section */
+}
+
+/* Additional Section Styles */
+.additional-section,
+.color-section,
+.description-image-section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px; /* Space above the section */
+}
+
+/* New Description and Image Section */
+.description-image-section {
+    display: flex; /* Flexbox for layout */
+    margin-top: 90px; /* Space above the description-image section */
+}
+
+/* Section Ratios */
+.section-20 {
+    flex: 0 0 20%; /* 20% width for left and right sections */
+}
+
+.section-60 {
+    flex: 0 0 60%; /* 60% width for the middle section */
+}
+
+/* Description Image Container */
+.description-image-container {
+    display: flex; /* Side by side layout */
+}
+
+/* Description Column */
+.column-description {
+    flex: 1; /* Allow this column to grow */
+    padding-right: 20px; /* Space between description and image */
+}
+
+/* Image Column */
+.column-image {
+    flex: 1; /* Allow this column to grow */
+    display: flex;
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
+/* Description Image */
+.description-image {
+    width: 100%; /* Take full width of the column */
+    max-width: 500px; /* Limit max width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Container Layout */
+.shop-by-age-container {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    padding: 80px;
+    gap: 10px;
+    margin-bottom: 100px; /* Space between this and other containers */
+}
+
+/* Columns */
+.shop-by-age-container .section-20 {
+    /* Empty section for spacing */
+}
+
+.shop-by-age-container .section-60 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Middle Content */
+.shop-by-age-container .middle-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 20px; /* Space between each row */
+}
+
+/* Title Row */
+.shop-by-age-container .title-row h2 {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Button Row */
+.shop-by-age-container .button-row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    gap: 2px; /* Space between buttons */
+}
+
+.shop-by-age-container .age-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.shop-by-age-container .age-button:hover {
+    background-color: #0056b3;
+}
+
+/* Product Row */
+.shop-by-age-container .product-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2px; /* Space between products */
+}
+
+.shop-by-age-container .product-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.shop-by-age-container .product-item img {
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.shop-by-age-container .product-info {
+    text-align: center;
+    margin-top: 10px; /* Space between image and product info */
+}
+
+.shop-by-age-container .product-name {
+    margin: 0;
+    font-size: 14px;
+}
+
+.shop-by-age-container .product-price {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* View All Button */
+.shop-by-age-container .view-all-row {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.shop-by-age-container .view-all-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.shop-by-age-container .view-all-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+/* Container Layout */
+.left-image-description-section {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    padding: 20px;
+    margin-bottom: 30px; /* Space between this container and others */
+}
+
+/* Columns */
+.left-image-description-section .section-20 {
+    /* Empty section for spacing */
+}
+
+.left-image-description-section .section-60 {
+    display: flex;
+    justify-content: center;
+}
+
+/* Description and Image Container */
+.left-image-description-section .description-image-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between image and description */
+    width: 100%;
+}
+
+/* Image Column */
+.left-image-description-section .column-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.left-image-description-section .description-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 8px;
+}
+
+/* Description Column */
+.left-image-description-section .column-description {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.left-image-description-section .column-description h2 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.left-image-description-section .column-description p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+
+/* Best Seller Section */
+.best-seller-section {
+    margin: 40px 0; /* Space around the section */
+}
+
+.best-seller-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 70px;
+    padding-bottom: 60px;
+}
+
+/* Product Grid Styling */
+.best-seller-section .product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 1x4 layout */
+    gap: 10px; /* Space between grid items */
+    padding: 0 250px; /* Left and right padding for space around images */
+}
+
+/* Image and Text Styling */
+.best-seller-section .image-item {
+    text-align: center;
+}
+
+.best-seller-section .image-item img {
+    width: 150px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.best-seller-section .product-info {
+    margin-top: 8px;
+}
+
+.best-seller-section .product-name {
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+.best-seller-section .product-price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+/* Footer styles */
+.footer {
+    background-color: #333; /* Footer background color */
+    color: white; /* Footer text color */
+    text-align: center; 
+    padding: 2px 0; /* Padding for footer */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 2px; /* Space between footer and content above */
+}
+
+.footer-content p {
+    margin: 5px 0; /* Space between footer text lines */
+}
